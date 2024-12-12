@@ -1,10 +1,8 @@
-from time import sleep
-from termcolor import colored
 import lib.utils as u
 import lib.abstractions as a
 import lib.ascii_art as ascii
-
-
+import lib.animations as ani
+from time import sleep
 # Todo:
 # - Textausgabe mit print():
 # - Bewegen mit if(): elif(): else():
@@ -16,22 +14,23 @@ import lib.ascii_art as ascii
 # New Screen #
 ##############
 
-# Remove warning
-u.clear_screen()
-
-for row in ascii.title_screen:
-    print(row)
+if __name__ == "__main__":
+    ani.title_animation()
 
 ##############
 # New Screen #
 ##############
 
-u.press_enter()
 print("Wie lautet dein Name?")
 
 while True:
-    user_name = input("\n> ")
-    if not user_name.isalpha():
+    first_enter = False
+    user_name = input("")
+    if user_name == "" and first_enter == False:
+        # ugly hack to avoid complexity in ani.title_animation()
+        first_enter = True
+        continue
+    elif not user_name.isalpha():
         u.clear_screen()
         u.text_red("Bitte nur Buchstaben eingeben.")
         print("Wie lautet dein Name?")
@@ -86,25 +85,21 @@ while True:
     if direction_01 not in ["n", "o", "s", "w"]:
         u.clear_screen()
         u.text_red('Bitte nur die Buchstaben "n", "o", "s", "w" verwenden.')
-        
         a.nosw_text()
         continue
     if direction_01 == "o":
         u.clear_screen()
         u.text_red("Der Weg nach Osten ist versperrt!")
-        
         a.nosw_text()
         continue
     if direction_01 == "w":
         u.clear_screen()
         u.text_red("Der Weg nach Westen ist versperrt!")
-        
         a.nosw_text()
         continue
     if direction_01 == "s":
         u.clear_screen()
         u.text_red("Zurück zum Strand macht keinen Sinn.")
-        
         a.nosw_text()
         continue
     if direction_01 == "n":
@@ -132,7 +127,7 @@ weapons = {
     1: ["(2)", "Eine Machete", "Die Machete"],
     2: ["(3)", "Einen Hammer", "Den Hammer"],
 }
-user_inventory = ["Der Beutel", "Die Lampe", "Die Streichhölzer"]
+user_inventory = ["Einen Beutel", "Eine Lampe", "Streichhölzer"]
 
 print("Was hält das Skelett da in der Hand? Ist das etwa eine Waffe?\n")
 for weapon in weapons.values():
