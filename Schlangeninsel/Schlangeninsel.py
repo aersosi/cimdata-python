@@ -2,6 +2,7 @@ from time import sleep
 from termcolor import colored
 import lib.utils as u
 import lib.abstractions as a
+import lib.ascii_art as ascii
 
 
 # Todo:
@@ -11,35 +12,14 @@ import lib.abstractions as a
 # - Random modul für weapon, Lebenspunkte, Witziger Gegenstand
 
 
-##################
-# Remove warning #
-##################
-u.clear_screen()
-
 ##############
 # New Screen #
 ##############
 
-title_screen = [
-    colored("                 Willkommen auf der                 ", "green"),
-    "",
-    colored("    _____      _     _                              ", "green"),
-    colored("   / ____|    | |   | |                             ", "green"),
-    colored("  | (___   ___| |__ | | __ _ _ __   __ _  ___ _ __  ", "green"),
-    colored("   \___ \ / __| '_ \| |/ _` | '_ \ / _` |/ _ \ '_ \ ", "green"),
-    colored("   ____) | (__| | | | | (_| | | | | (_| |  __/ | | |", "green"),
-    colored("  |_____/ \___|_| |_|_|\__,_|_| |_|\__, |\___|_| |_|", "green"),
-    colored("                   |_   _|          __/ || |        ", "green"),
-    colored("                     | |  _ __  ___|___/ | |        ", "green"),
-    colored("                     | | | '_ \/ __|/ _ \| |        ", "green"),
-    colored("                    _| |_| | | \__ \  __/| |        ", "green"),
-    colored("                   |_____|_| |_|___/\___||_|        ", "green"),
-    "",
-    "",
-    colored("            Bestätige mit [ENTER], um fortzufahren.          ", "light_grey")
-]
+# Remove warning
+u.clear_screen()
 
-for row in title_screen:
+for row in ascii.title_screen:
     print(row)
 
 ##############
@@ -211,20 +191,7 @@ u.press_enter()
 
 u.clear_screen()
 
-end_screen = [
-    "",
-    colored("                ______ _   _ _____  ______               ", "red"),
-    colored("               |  ____| \ | |  __ \|  ____|              ", "red"),
-    colored("               | |__  |  \| | |  | | |__                 ", "red"),
-    colored("               |  __| | . ` | |  | |  __|                ", "red"),
-    colored("               | |____| |\  | |__| | |____               ", "red"),
-    colored("               |______|_| \_|_____/|______|              ", "red"),
-    "",
-    "",
-    colored("Bestätige mit [ENTER], um die Schlangeninsel zu verlassen.", "light_grey")
-]
-
-for row in end_screen:
+for row in ascii.end_screen:
     print(row)
 
 u.press_enter()
