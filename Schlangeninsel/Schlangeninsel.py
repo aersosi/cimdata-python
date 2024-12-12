@@ -10,16 +10,16 @@ from time import sleep
 # - Random modul für weapon, Lebenspunkte, Witziger Gegenstand
 
 
-##############
-# New Screen #
-##############
+#########
+# Start #
+#########
 
 if __name__ == "__main__":
     ani.title_animation()
 
-##############
-# New Screen #
-##############
+#########
+# Start #
+#########
 
 print("Wie lautet dein Name?")
 
@@ -180,13 +180,15 @@ for index, item in enumerate(user_inventory):
 u.text_grey("\nBestätige mit [ENTER], um fortzufahren.")
 u.press_enter()
 
-##############
-# New Screen #
-##############
+
+#######
+# END #
+#######
 
 u.clear_screen()
+if __name__ == "__main__":
+    ani.end_animation()
 
-for row in ascii.end_screen:
-    print(row)
-
-u.press_enter()
+#######
+# END #
+#######

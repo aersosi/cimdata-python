@@ -9,6 +9,9 @@ import lib.ascii_art as ascii
 def title_animation():
     animation(ascii.title_screen_1, ascii.title_screen_2)
 
+def end_animation():
+    animation(ascii.end_screen_1, ascii.end_screen_2)
+
 def animation(ani1, ani2):
     try:
         while True:

@@ -40,7 +40,20 @@ title_screen_2 = [
 ]
 
 
-end_screen = [
+end_screen_1 = [
+    "",
+    colored("                ______ _   _ _____  ______               ", "green"),
+    colored("               |  ____| \ | |  __ \|  ____|              ", "green"),
+    colored("               | |__  |  \| | |  | | |__                 ", "green"),
+    colored("               |  __| | . ` | |  | |  __|                ", "green"),
+    colored("               | |____| |\  | |__| | |____               ", "green"),
+    colored("               |______|_| \_|_____/|______|              ", "green"),
+    "",
+    "",
+    colored("Bestätige mit [ENTER], um die Schlangeninsel zu verlassen.", "light_grey")
+]
+
+end_screen_2 = [
     "",
     colored("                ______ _   _ _____  ______               ", "red"),
     colored("               |  ____| \ | |  __ \|  ____|              ", "red"),
