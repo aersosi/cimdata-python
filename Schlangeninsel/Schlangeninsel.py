@@ -1,14 +1,6 @@
-import lib.utils as u
 import lib.abstractions as a
-import lib.ascii_art as ascii
 import lib.animations as ani
-from time import sleep
-# Todo:
-# - Textausgabe mit print():
-# - Bewegen mit if(): elif(): else():
-# - User-Eingabe in Variable speichern (nur bestimmte datentypen nehmen)
-# - Random modul für weapon, Lebenspunkte, Witziger Gegenstand
-
+import lib.utils as u
 
 #########
 # Start #
